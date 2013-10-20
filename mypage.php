@@ -18,7 +18,7 @@
 
 /**
  *	\file		mypage.php
- *	\ingroup	mymodule
+ *	\ingroup	axagenda
  *	\brief		This file is an example php page
  *				Put some comments here
  */
@@ -63,10 +63,10 @@ if (! $res) {
 }
 // Change this following line to use the correct relative path from htdocs
 // (do not remove DOL_DOCUMENT_ROOT)
-require_once DOL_DOCUMENT_ROOT . "custom/mymodule/class/myclass.class.php";
+require_once DOL_DOCUMENT_ROOT . "custom/axagenda/class/myclass.class.php";
 
 // Load translation files required by the page
-$langs->load("mymodule@mymodule");
+$langs->load("axagenda@axagenda");
 
 // Get parameters
 $id = GETPOST('id', 'int');

@@ -18,7 +18,7 @@
 
 /**
  * 	\file		admin/about.php
- * 	\ingroup	mymodule
+ * 	\ingroup	axagenda
  * 	\brief		This file is an example about page
  * 				Put some comments here
  */
@@ -31,14 +31,14 @@ if (! $res) {
 
 // Libraries
 require_once DOL_DOCUMENT_ROOT . "/core/lib/admin.lib.php";
-require_once '../lib/mymodule.lib.php';
+require_once '../lib/axagenda.lib.php';
 
-dol_include_once('/mymodule/lib/php-markdown/markdown.php');
+dol_include_once('/axagenda/lib/php-markdown/markdown.php');
 
 
 //require_once "../class/myclass.class.php";
 // Translations
-$langs->load("mymodule@mymodule");
+$langs->load("axagenda@axagenda");
 
 // Access control
 if (! $user->admin) {
@@ -55,7 +55,7 @@ $action = GETPOST('action', 'alpha');
 /*
  * View
  */
-$page_name = "MyModuleAbout";
+$page_name = "AxAgendaAbout";
 llxHeader('', $langs->trans($page_name));
 
 // Subheader
@@ -64,26 +64,26 @@ $linkback = '<a href="' . DOL_URL_ROOT . '/admin/modules.php">'
 print_fiche_titre($langs->trans($page_name), $linkback);
 
 // Configuration header
-$head = mymoduleAdminPrepareHead();
+$head = axagendaAdminPrepareHead();
 dol_fiche_head(
     $head,
     'about',
     $langs->trans("Module10000Name"),
     0,
-    'mymodule@mymodule'
+    'axagenda@axagenda'
 );
 
 // About page goes here
-echo $langs->trans("MyModuleAboutPage");
+echo $langs->trans("AxAgendaAboutPage");
 
 echo '<br>';
 
-$buffer = file_get_contents(dol_buildpath('/mymodule/README.md', 0));
+$buffer = file_get_contents(dol_buildpath('/axagenda/README.md', 0));
 echo Markdown($buffer);
 
 echo '<br>',
-'<a href="' . dol_buildpath('/mymodule/COPYING', 1) . '">',
-'<img src="' . dol_buildpath('/mymodule/img/gplv3.png', 1) . '"/>',
+'<a href="' . dol_buildpath('/axagenda/COPYING', 1) . '">',
+'<img src="' . dol_buildpath('/axagenda/img/gplv3.png', 1) . '"/>',
 '</a>';
 
 llxFooter();

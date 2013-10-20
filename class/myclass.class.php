@@ -18,7 +18,7 @@
 
 /**
  * 	\file		class/myclass.class.php
- * 	\ingroup	mymodule
+ * 	\ingroup	axagenda
  * 	\brief		This file is an example CRUD class file (Create/Read/Update/Delete)
  * 				Put some comments here
  */

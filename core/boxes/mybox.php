@@ -18,7 +18,7 @@
 
 /**
  * 	\file		core/boxes/mybox.php
- * 	\ingroup	mymodule
+ * 	\ingroup	axagenda
  * 	\brief		This file is a sample box definition file
  * 				Put some comments here
  */
@@ -31,9 +31,9 @@ class mybox extends ModeleBoxes
 {
 
     public $boxcode = "mybox";
-    public $boximg = "mymodule@mymodule";
+    public $boximg = "axagenda@axagenda";
     public $boxlabel;
-    public $depends = array("mymodule");
+    public $depends = array("axagenda");
     public $db;
     public $param;
     public $info_box_head = array();
@@ -62,7 +62,7 @@ class mybox extends ModeleBoxes
 
         $this->max = $max;
 
-        //include_once DOL_DOCUMENT_ROOT . "/mymodule/class/mymodule.class.php";
+        //include_once DOL_DOCUMENT_ROOT . "/axagenda/class/axagenda.class.php";
 
         $text = $langs->trans("MyBoxDescription", $max);
         $this->info_box_head = array(

@@ -19,7 +19,7 @@
 
 /**
  *	\file		scripts/myscript.php
- *	\ingroup	mymodule
+ *	\ingroup	axagenda
  *	\brief		This file is an example command line script
  *				Put some comments here
  */
@@ -75,7 +75,7 @@ $db->begin();
 
 
 // Examples for manipulating class skeletonclass
-require_once DOL_DOCUMENT_ROOT . "/mymodule/myclass.class.php";
+require_once DOL_DOCUMENT_ROOT . "/axagenda/myclass.class.php";
 $myobject = new SkeletonClass($db);
 
 // Example for inserting creating object in database

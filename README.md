@@ -57,18 +57,18 @@ for example on a Windows system:
 
 For more information about the conf.php file take a look at the conf.php.example file.
 
-- Clone the repsitory in $dolibarr_main_document_root_alt/mymodule
+- Clone the repsitory in $dolibarr_main_document_root_alt/axagenda
 
 (You may have to create the custom directory first if it doesn't exist yet.)
 
 ```
-git clone --recursive git@github.com:rdoursenaud/dolibarr-module-template.git mymodule
+git clone --recursive git@github.com:rdoursenaud/dolibarr-module-template.git axagenda
 ```
 
 - The template now uses a git submodule to fetch the PHP Markdown library. If your git version is less than 1.6.5, the --recursive parameter won't work. Please use this to fetch the latest version:
 ```
-git clone git@github.com:rdoursenaud/dolibarr-module-template.git mymodule
-cd mymodule
+git clone git@github.com:rdoursenaud/dolibarr-module-template.git axagenda
+cd axagenda
 git submodule update --init
 ```
 

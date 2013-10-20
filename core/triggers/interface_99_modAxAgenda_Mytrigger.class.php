@@ -18,7 +18,7 @@
 
 /**
  * 	\file		core/triggers/interface_99_modMyodule_Mytrigger.class.php
- * 	\ingroup	mymodule
+ * 	\ingroup	axagenda
  * 	\brief		Sample trigger
  * 	\remarks	You can create other triggers by copying this one
  * 				- File name should be either:
@@ -54,7 +54,7 @@ class InterfaceMytrigger
             . "They are provided for tutorial purpose only.";
         // 'development', 'experimental', 'dolibarr' or version
         $this->version = 'development';
-        $this->picto = 'mymodule@mymodule';
+        $this->picto = 'axagenda@axagenda';
     }
 
     /**
