@@ -252,29 +252,29 @@ class modAxAgenda extends DolibarrModules
         // Add here entries to declare new menus
         //
         // Example to declare a new Top Menu entry and its Left menu entry:
-        //$this->menu[$r]=array(
-        //	// Put 0 if this is a top menu
-        //	'fk_menu'=>0,
-        //	// This is a Top menu entry
-        //	'type'=>'top',
-        //	'titre'=>'AxAgenda top menu',
-        //	'mainmenu'=>'axagenda',
-        //	'leftmenu'=>'axagenda',
-        //	'url'=>'/axagenda/pagetop.php',
-        //	// Lang file to use (without .lang) by module.
-        //	// File must be in langs/code_CODE/ directory.
-        //	'langs'=>'mylangfile',
-        //	'position'=>100,
-        //	// Define condition to show or hide menu entry.
-        //	// Use '$conf->axagenda->enabled' if entry must be visible if module is enabled.
-        //	'enabled'=>'$conf->axagenda->enabled',
-        //	// Use 'perms'=>'$user->rights->axagenda->level1->level2'
-        //	// if you want your menu with a permission rules
-        //	'perms'=>'1',
-        //	'target'=>'',
-        //	// 0=Menu for internal users, 1=external users, 2=both
-        //	'user'=>2
-        //);
+        $this->menu[$r]=array(
+        	// Put 0 if this is a top menu
+        	'fk_menu'=>0,
+        	// This is a Top menu entry
+        	'type'=>'top',
+        	'titre'=>'AxAgenda top menu',
+        	'mainmenu'=>'axagenda',
+        	'leftmenu'=>'axagenda',
+        	'url'=>'/axagenda/pagetop.php',
+        	// Lang file to use (without .lang) by module.
+        	// File must be in langs/code_CODE/ directory.
+        	'langs'=>'mylangfile',
+        	'position'=>100,
+        	// Define condition to show or hide menu entry.
+        	// Use '$conf->axagenda->enabled' if entry must be visible if module is enabled.
+        	'enabled'=>'$conf->axagenda->enabled',
+        	// Use 'perms'=>'$user->rights->axagenda->level1->level2'
+        	// if you want your menu with a permission rules
+        	'perms'=>'1',
+        	'target'=>'',
+        	// 0=Menu for internal users, 1=external users, 2=both
+        	'user'=>2
+        );
         //$r++;
         //$this->menu[$r]=array(
         //	// Use r=value where r is index key used for the parent menu entry

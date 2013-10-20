@@ -1,0 +1,43 @@
+CalendarEventReminder:
+    type: entity
+    table: calendar_event_reminder
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        eventid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: eventId
+        type:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+        early:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+        unit:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+        alerted:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+    lifecycleCallbacks: {  }

@@ -32,6 +32,8 @@ if (! $res) {
 // Libraries
 require_once DOL_DOCUMENT_ROOT . "/core/lib/admin.lib.php";
 require_once '../lib/axagenda.lib.php';
+require_once '../lib/doctrine/bootstrap.php';
+
 //require_once "../class/myclass.class.php";
 // Translations
 $langs->load("axagenda@axagenda");
@@ -70,7 +72,20 @@ dol_fiche_head(
 );
 
 // Setup page goes here
-echo $langs->trans("AxAgendaSetupPage");
+
+
+// DOCTRINE /// 
+
+$doctrine = new Doctrine;
+$em = $doctrine->em;
+$user = $em->find('User', 1);
+echo $user->getEmail() . "\n";
+
+//// FIN -- DOCTRINE /// 
+
+
+
+// echo $langs->trans("AxAgendaSetupPage");
 
 llxFooter();
 
