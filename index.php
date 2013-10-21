@@ -15,26 +15,57 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-$res=0;
-if (! $res && file_exists("../main.inc.php")) $res=@include("../main.inc.php");// to work if your module directory is into dolibarr root htdocs directory
-if (! $res && file_exists("../../main.inc.php")) $res=@include("../../main.inc.php");// to work if your module directory is into a subdir of root htdocs directory
-if (! $res) die("Include of main fails");
 
-@include("./load_mycalendar.php");
+/**
+ *	\file		mypage.php
+ *	\ingroup	axagenda
+ *	\brief		This file is an example php page
+ *				Put some comments here
+ */
 
-$head = ''; $title=''; $help_url=''; $target=''; $disablejs=0; $disablehead=0; $morequerystring='';
-
-$arrayofjs = '';
-llxHeader($head, $title, $target, $disablejs, $disablehead, $arrayofjs, $arrayofcss, $morequerystring);
-
-
-echo '<div id="calendar-container"></div>';
-
+//if (! defined('NOREQUIREUSER'))	define('NOREQUIREUSER','1');
+//if (! defined('NOREQUIREDB'))		define('NOREQUIREDB','1');
+//if (! defined('NOREQUIRESOC'))	define('NOREQUIRESOC','1');
+//if (! defined('NOREQUIRETRAN'))	define('NOREQUIRETRAN','1');
+//if (! defined('NOCSRFCHECK'))		define('NOCSRFCHECK','1');
+//if (! defined('NOTOKENRENEWAL'))	define('NOTOKENRENEWAL','1');
+// If there is no menu to show
+//if (! defined('NOREQUIREMENU'))	define('NOREQUIREMENU','1');
+// If we don't need to load the html.form.class.php
+//if (! defined('NOREQUIREHTML'))	define('NOREQUIREHTML','1');
+//if (! defined('NOREQUIREAJAX'))	define('NOREQUIREAJAX','1');
+// If this page is public (can be called outside logged session)
+//if (! defined("NOLOGIN"))			define("NOLOGIN",'1');
+// Choose the following lines to use the correct relative path
+// (../, ../../, etc)
+$res = 0;
+if (! $res && file_exists("../main.inc.php")) {
+    $res = @include("../main.inc.php");
+}
+if (! $res && file_exists("../../main.inc.php")) {
+    $res = @include("../../main.inc.php");
+}
+if (! $res && file_exists("../../../main.inc.php")) {
+    $res = @include("../../../main.inc.php");
+}
+// The following should only be used in development environments
+if (! $res && file_exists("../../../dolibarr/htdocs/main.inc.php")) {
+    $res = @include("../../../dolibarr/htdocs/main.inc.php");
+}
+if (! $res && file_exists("../../../../dolibarr/htdocs/main.inc.php")) {
+    $res = @include("../../../../dolibarr/htdocs/main.inc.php");
+}
+if (! $res && file_exists("../../../../../dolibarr/htdocs/main.inc.php")) {
+    $res = @include("../../../../../dolibarr/htdocs/main.inc.php");
+}
+if (! $res) {
+    die("Main include failed");
+}
+// Change this following line to use the correct relative path from htdocs
+// (do not remove DOL_DOCUMENT_ROOT)
+llxHeader('', 'MyPageName', '');
+// End of page
+require_once DOL_DOCUMENT_ROOT . '/axagenda/load_mycalendar.php';
 
 llxFooter();
 $db->close();
-
-
-
-
-

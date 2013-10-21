@@ -24,8 +24,6 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-require 'bootstrap.php';
-
 class event{
     var $id;
     var $authorId;
@@ -44,7 +42,7 @@ class CalendarAgent{
     var $dbUser = "root";
     var $dbHost = "localhost";
     var $dbPwd="admin";
-    var $dbName ="mycalendar";
+    var $dbName ="mycalendar_default";
     var $dbPrefix = '';
     var $DOCUMENT_ROOT = "";
     var $hanlde = NULL;

@@ -23,7 +23,32 @@
  * OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
+$res = 0;
+if (! $res && file_exists("../main.inc.php")) {
+    $res = @include("../main.inc.php");
+}
+if (! $res && file_exists("../../main.inc.php")) {
+    $res = @include("../../main.inc.php");
+}
+if (! $res && file_exists("../../../main.inc.php")) {
+    $res = @include("../../../main.inc.php");
+}
+// The following should only be used in development environments
+if (! $res && file_exists("../../../dolibarr/htdocs/main.inc.php")) {
+    $res = @include("../../../dolibarr/htdocs/main.inc.php");
+}
+if (! $res && file_exists("../../../../dolibarr/htdocs/main.inc.php")) {
+    $res = @include("../../../../dolibarr/htdocs/main.inc.php");
+}
+if (! $res && file_exists("../../../../../dolibarr/htdocs/main.inc.php")) {
+    $res = @include("../../../../../dolibarr/htdocs/main.inc.php");
+}
+if (! $res) {
+    die("Main include failed");
+}
+
 require_once DOL_DOCUMENT_ROOT."/axagenda/class/CalendarAgent.php";
+
 if(class_exists('CalendarAgent'))
   {
     $agent = new CalendarAgent();
