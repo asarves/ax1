@@ -260,7 +260,7 @@ class modAxAgenda extends DolibarrModules
         	'titre'=>'AxAgenda top menu',
         	'mainmenu'=>'axagenda',
         	'leftmenu'=>'axagenda',
-        	'url'=>'/axagenda/pagetop.php',
+        	'url'=>'/axagenda/index.php',
         	// Lang file to use (without .lang) by module.
         	// File must be in langs/code_CODE/ directory.
         	'langs'=>'mylangfile',

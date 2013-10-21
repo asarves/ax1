@@ -15,3 +15,26 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+$res=0;
+if (! $res && file_exists("../main.inc.php")) $res=@include("../main.inc.php");// to work if your module directory is into dolibarr root htdocs directory
+if (! $res && file_exists("../../main.inc.php")) $res=@include("../../main.inc.php");// to work if your module directory is into a subdir of root htdocs directory
+if (! $res) die("Include of main fails");
+
+@include("./load_mycalendar.php");
+
+$head = ''; $title=''; $help_url=''; $target=''; $disablejs=0; $disablehead=0; $morequerystring='';
+
+$arrayofjs = '';
+llxHeader($head, $title, $target, $disablejs, $disablehead, $arrayofjs, $arrayofcss, $morequerystring);
+
+
+echo '<div id="calendar-container"></div>';
+
+
+llxFooter();
+$db->close();
+
+
+
+
+
