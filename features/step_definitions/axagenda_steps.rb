@@ -10,5 +10,5 @@ Then /^check axagenda$/ do
   click_button 'Connexion'
   sleep 2
   visit 'http://jobenfance.local/axagenda'
-  puts page.html
+  page.should have_selector('div.fiche')
 end
