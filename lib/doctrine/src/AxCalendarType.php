@@ -5,12 +5,12 @@
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * CalendarType
+ * AxCalendarType
  *
- * @ORM\Table(name="calendar_type", indexes={@ORM\Index(name="FK7503A39B581C403A", columns={"userId"})})
+ * @ORM\Table(name="ax_calendar_type", indexes={@ORM\Index(name="FK7503A39B581C403A", columns={"userId"})})
  * @ORM\Entity
  */
-class CalendarType
+class AxCalendarType
 {
     /**
      * @var integer
@@ -85,7 +85,7 @@ class CalendarType
      * Set userid
      *
      * @param integer $userid
-     * @return CalendarType
+     * @return AxCalendarType
      */
     public function setUserid($userid)
     {
@@ -108,7 +108,7 @@ class CalendarType
      * Set color
      *
      * @param string $color
-     * @return CalendarType
+     * @return AxCalendarType
      */
     public function setColor($color)
     {
@@ -131,7 +131,7 @@ class CalendarType
      * Set creationDate
      *
      * @param \DateTime $creationDate
-     * @return CalendarType
+     * @return AxCalendarType
      */
     public function setCreationDate($creationDate)
     {
@@ -154,7 +154,7 @@ class CalendarType
      * Set description
      *
      * @param string $description
-     * @return CalendarType
+     * @return AxCalendarType
      */
     public function setDescription($description)
     {
@@ -177,7 +177,7 @@ class CalendarType
      * Set hide
      *
      * @param boolean $hide
-     * @return CalendarType
+     * @return AxCalendarType
      */
     public function setHide($hide)
     {
@@ -200,7 +200,7 @@ class CalendarType
      * Set name
      *
      * @param string $name
-     * @return CalendarType
+     * @return AxCalendarType
      */
     public function setName($name)
     {
@@ -223,7 +223,7 @@ class CalendarType
      * Set updateDate
      *
      * @param \DateTime $updateDate
-     * @return CalendarType
+     * @return AxCalendarType
      */
     public function setUpdateDate($updateDate)
     {

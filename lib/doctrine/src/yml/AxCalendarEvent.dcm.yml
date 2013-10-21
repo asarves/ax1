@@ -1,6 +1,6 @@
-CalendarEvent:
+AxCalendarEvent:
     type: entity
-    table: calendar_event
+    table: ax_calendar_event
     indexes:
         FK2A9BEA59743E7F7:
             columns:

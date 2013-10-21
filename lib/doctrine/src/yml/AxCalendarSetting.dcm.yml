@@ -1,6 +1,6 @@
-CalendarSetting:
+AxCalendarSetting:
     type: entity
-    table: calendar_setting
+    table: ax_calendar_setting
     id:
         userid:
             type: integer

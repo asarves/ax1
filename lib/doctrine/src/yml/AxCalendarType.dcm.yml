@@ -1,6 +1,10 @@
-CalendarEventReminder:
+AxCalendarType:
     type: entity
-    table: calendar_event_reminder
+    table: ax_calendar_type
+    indexes:
+        FK7503A39B581C403A:
+            columns:
+                - userId
     id:
         id:
             type: integer
@@ -11,33 +15,42 @@ CalendarEventReminder:
             generator:
                 strategy: IDENTITY
     fields:
-        eventid:
+        userid:
             type: integer
             nullable: false
             unsigned: false
             comment: ''
-            column: eventId
-        type:
+            column: userId
+        color:
             type: string
             nullable: false
             length: 255
             fixed: false
             comment: ''
-        early:
-            type: integer
+        creationDate:
+            type: datetime
             nullable: false
-            unsigned: false
             comment: ''
-        unit:
+            column: creation_date
+        description:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+        hide:
+            type: boolean
+            nullable: true
+            comment: ''
+        name:
             type: string
             nullable: false
             length: 255
             fixed: false
             comment: ''
-        alerted:
-            type: string
+        updateDate:
+            type: datetime
             nullable: false
-            length: 255
-            fixed: false
             comment: ''
+            column: update_date
     lifecycleCallbacks: {  }

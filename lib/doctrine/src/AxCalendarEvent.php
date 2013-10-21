@@ -5,12 +5,12 @@
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * CalendarEvent
+ * AxCalendarEvent
  *
- * @ORM\Table(name="calendar_event", indexes={@ORM\Index(name="FK2A9BEA59743E7F7", columns={"calendarId"}), @ORM\Index(name="FK2A9BEA59581C403A", columns={"userId"})})
+ * @ORM\Table(name="ax_calendar_event", indexes={@ORM\Index(name="FK2A9BEA59743E7F7", columns={"calendarId"}), @ORM\Index(name="FK2A9BEA59581C403A", columns={"userId"})})
  * @ORM\Entity
  */
-class CalendarEvent
+class AxCalendarEvent
 {
     /**
      * @var integer
@@ -106,7 +106,7 @@ class CalendarEvent
      * Set userid
      *
      * @param integer $userid
-     * @return CalendarEvent
+     * @return AxCalendarEvent
      */
     public function setUserid($userid)
     {
@@ -129,7 +129,7 @@ class CalendarEvent
      * Set calendarid
      *
      * @param integer $calendarid
-     * @return CalendarEvent
+     * @return AxCalendarEvent
      */
     public function setCalendarid($calendarid)
     {
@@ -152,7 +152,7 @@ class CalendarEvent
      * Set repeattype
      *
      * @param string $repeattype
-     * @return CalendarEvent
+     * @return AxCalendarEvent
      */
     public function setRepeattype($repeattype)
     {
@@ -175,7 +175,7 @@ class CalendarEvent
      * Set starttime
      *
      * @param string $starttime
-     * @return CalendarEvent
+     * @return AxCalendarEvent
      */
     public function setStarttime($starttime)
     {
@@ -198,7 +198,7 @@ class CalendarEvent
      * Set endtime
      *
      * @param string $endtime
-     * @return CalendarEvent
+     * @return AxCalendarEvent
      */
     public function setEndtime($endtime)
     {
@@ -221,7 +221,7 @@ class CalendarEvent
      * Set creationDate
      *
      * @param \DateTime $creationDate
-     * @return CalendarEvent
+     * @return AxCalendarEvent
      */
     public function setCreationDate($creationDate)
     {
@@ -244,7 +244,7 @@ class CalendarEvent
      * Set description
      *
      * @param string $description
-     * @return CalendarEvent
+     * @return AxCalendarEvent
      */
     public function setDescription($description)
     {
@@ -267,7 +267,7 @@ class CalendarEvent
      * Set subject
      *
      * @param string $subject
-     * @return CalendarEvent
+     * @return AxCalendarEvent
      */
     public function setSubject($subject)
     {
@@ -290,7 +290,7 @@ class CalendarEvent
      * Set updateDate
      *
      * @param \DateTime $updateDate
-     * @return CalendarEvent
+     * @return AxCalendarEvent
      */
     public function setUpdateDate($updateDate)
     {
@@ -313,7 +313,7 @@ class CalendarEvent
      * Set locked
      *
      * @param boolean $locked
-     * @return CalendarEvent
+     * @return AxCalendarEvent
      */
     public function setLocked($locked)
     {

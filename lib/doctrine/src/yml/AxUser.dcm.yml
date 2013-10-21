@@ -1,6 +1,6 @@
-User:
+AxUser:
     type: entity
-    table: user
+    table: ax_user
     uniqueConstraints:
         username:
             columns:

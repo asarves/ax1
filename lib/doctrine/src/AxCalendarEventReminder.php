@@ -5,12 +5,12 @@
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * CalendarEventReminder
+ * AxCalendarEventReminder
  *
- * @ORM\Table(name="calendar_event_reminder")
+ * @ORM\Table(name="ax_calendar_event_reminder")
  * @ORM\Entity
  */
-class CalendarEventReminder
+class AxCalendarEventReminder
 {
     /**
      * @var integer
@@ -71,7 +71,7 @@ class CalendarEventReminder
      * Set eventid
      *
      * @param integer $eventid
-     * @return CalendarEventReminder
+     * @return AxCalendarEventReminder
      */
     public function setEventid($eventid)
     {
@@ -94,7 +94,7 @@ class CalendarEventReminder
      * Set type
      *
      * @param string $type
-     * @return CalendarEventReminder
+     * @return AxCalendarEventReminder
      */
     public function setType($type)
     {
@@ -117,7 +117,7 @@ class CalendarEventReminder
      * Set early
      *
      * @param integer $early
-     * @return CalendarEventReminder
+     * @return AxCalendarEventReminder
      */
     public function setEarly($early)
     {
@@ -140,7 +140,7 @@ class CalendarEventReminder
      * Set unit
      *
      * @param string $unit
-     * @return CalendarEventReminder
+     * @return AxCalendarEventReminder
      */
     public function setUnit($unit)
     {
@@ -163,7 +163,7 @@ class CalendarEventReminder
      * Set alerted
      *
      * @param string $alerted
-     * @return CalendarEventReminder
+     * @return AxCalendarEventReminder
      */
     public function setAlerted($alerted)
     {

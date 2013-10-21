@@ -5,12 +5,12 @@
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * User
+ * AxUser
  *
- * @ORM\Table(name="user", uniqueConstraints={@ORM\UniqueConstraint(name="username", columns={"username"})})
+ * @ORM\Table(name="ax_user", uniqueConstraints={@ORM\UniqueConstraint(name="username", columns={"username"})})
  * @ORM\Entity
  */
-class User
+class AxUser
 {
     /**
      * @var integer
@@ -19,7 +19,7 @@ class User
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $id;
+  public $id;
 
     /**
      * @var string
@@ -92,7 +92,7 @@ class User
      * Set description
      *
      * @param string $description
-     * @return User
+     * @return AxUser
      */
     public function setDescription($description)
     {
@@ -115,7 +115,7 @@ class User
      * Set email
      *
      * @param string $email
-     * @return User
+     * @return AxUser
      */
     public function setEmail($email)
     {
@@ -138,7 +138,7 @@ class User
      * Set emailShow
      *
      * @param integer $emailShow
-     * @return User
+     * @return AxUser
      */
     public function setEmailShow($emailShow)
     {
@@ -161,7 +161,7 @@ class User
      * Set enabled
      *
      * @param integer $enabled
-     * @return User
+     * @return AxUser
      */
     public function setEnabled($enabled)
     {
@@ -184,7 +184,7 @@ class User
      * Set firstName
      *
      * @param string $firstName
-     * @return User
+     * @return AxUser
      */
     public function setFirstName($firstName)
     {
@@ -207,7 +207,7 @@ class User
      * Set lastName
      *
      * @param string $lastName
-     * @return User
+     * @return AxUser
      */
     public function setLastName($lastName)
     {
@@ -230,7 +230,7 @@ class User
      * Set passwd
      *
      * @param string $passwd
-     * @return User
+     * @return AxUser
      */
     public function setPasswd($passwd)
     {
@@ -253,7 +253,7 @@ class User
      * Set username
      *
      * @param string $username
-     * @return User
+     * @return AxUser
      */
     public function setUsername($username)
     {

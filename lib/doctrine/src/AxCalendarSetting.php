@@ -5,12 +5,12 @@
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * CalendarSetting
+ * AxCalendarSetting
  *
- * @ORM\Table(name="calendar_setting")
+ * @ORM\Table(name="ax_calendar_setting")
  * @ORM\Entity
  */
-class CalendarSetting
+class AxCalendarSetting
 {
     /**
      * @var integer
@@ -141,7 +141,7 @@ class CalendarSetting
      * Set hourformat
      *
      * @param string $hourformat
-     * @return CalendarSetting
+     * @return AxCalendarSetting
      */
     public function setHourformat($hourformat)
     {
@@ -164,7 +164,7 @@ class CalendarSetting
      * Set dayformat
      *
      * @param string $dayformat
-     * @return CalendarSetting
+     * @return AxCalendarSetting
      */
     public function setDayformat($dayformat)
     {
@@ -187,7 +187,7 @@ class CalendarSetting
      * Set weekformat
      *
      * @param string $weekformat
-     * @return CalendarSetting
+     * @return AxCalendarSetting
      */
     public function setWeekformat($weekformat)
     {
@@ -210,7 +210,7 @@ class CalendarSetting
      * Set monthformat
      *
      * @param string $monthformat
-     * @return CalendarSetting
+     * @return AxCalendarSetting
      */
     public function setMonthformat($monthformat)
     {
@@ -233,7 +233,7 @@ class CalendarSetting
      * Set fromtoformat
      *
      * @param string $fromtoformat
-     * @return CalendarSetting
+     * @return AxCalendarSetting
      */
     public function setFromtoformat($fromtoformat)
     {
@@ -256,7 +256,7 @@ class CalendarSetting
      * Set activestarttime
      *
      * @param string $activestarttime
-     * @return CalendarSetting
+     * @return AxCalendarSetting
      */
     public function setActivestarttime($activestarttime)
     {
@@ -279,7 +279,7 @@ class CalendarSetting
      * Set activeendtime
      *
      * @param string $activeendtime
-     * @return CalendarSetting
+     * @return AxCalendarSetting
      */
     public function setActiveendtime($activeendtime)
     {
@@ -302,7 +302,7 @@ class CalendarSetting
      * Set createbydblclick
      *
      * @param boolean $createbydblclick
-     * @return CalendarSetting
+     * @return AxCalendarSetting
      */
     public function setCreatebydblclick($createbydblclick)
     {
@@ -325,7 +325,7 @@ class CalendarSetting
      * Set hideinactiverow
      *
      * @param boolean $hideinactiverow
-     * @return CalendarSetting
+     * @return AxCalendarSetting
      */
     public function setHideinactiverow($hideinactiverow)
     {
@@ -348,7 +348,7 @@ class CalendarSetting
      * Set singleday
      *
      * @param boolean $singleday
-     * @return CalendarSetting
+     * @return AxCalendarSetting
      */
     public function setSingleday($singleday)
     {
@@ -371,7 +371,7 @@ class CalendarSetting
      * Set language
      *
      * @param string $language
-     * @return CalendarSetting
+     * @return AxCalendarSetting
      */
     public function setLanguage($language)
     {
@@ -394,7 +394,7 @@ class CalendarSetting
      * Set intervalslot
      *
      * @param integer $intervalslot
-     * @return CalendarSetting
+     * @return AxCalendarSetting
      */
     public function setIntervalslot($intervalslot)
     {
@@ -417,7 +417,7 @@ class CalendarSetting
      * Set startday
      *
      * @param string $startday
-     * @return CalendarSetting
+     * @return AxCalendarSetting
      */
     public function setStartday($startday)
     {
@@ -440,7 +440,7 @@ class CalendarSetting
      * Set readonly
      *
      * @param boolean $readonly
-     * @return CalendarSetting
+     * @return AxCalendarSetting
      */
     public function setReadonly($readonly)
     {
@@ -463,7 +463,7 @@ class CalendarSetting
      * Set initialview
      *
      * @param integer $initialview
-     * @return CalendarSetting
+     * @return AxCalendarSetting
      */
     public function setInitialview($initialview)
     {
