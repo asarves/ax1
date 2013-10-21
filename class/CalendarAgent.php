@@ -23,6 +23,31 @@
  * OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
+/* $res = 0; */
+/* if (! $res && file_exists("../main.inc.php")) { */
+/*     $res = @include("../main.inc.php"); */
+/* } */
+/* if (! $res && file_exists("../../main.inc.php")) { */
+/*     $res = @include("../../main.inc.php"); */
+/* } */
+/* if (! $res && file_exists("../../../main.inc.php")) { */
+/*     $res = @include("../../../main.inc.php"); */
+/* } */
+/* // The following should only be used in development environments */
+/* if (! $res && file_exists("../../../dolibarr/htdocs/main.inc.php")) { */
+/*     $res = @include("../../../dolibarr/htdocs/main.inc.php"); */
+/* } */
+/* if (! $res && file_exists("../../../../dolibarr/htdocs/main.inc.php")) { */
+/*     $res = @include("../../../../dolibarr/htdocs/main.inc.php"); */
+/* } */
+/* if (! $res && file_exists("../../../../../dolibarr/htdocs/main.inc.php")) { */
+/*     $res = @include("../../../../../dolibarr/htdocs/main.inc.php"); */
+/* } */
+/* if (! $res) { */
+/*     die("Main include failed"); */
+/* } */
+
+@include("../../main.inc.php");
 
 class event{
     var $id;
@@ -714,6 +739,16 @@ class CalendarAgent{
     }
 
     function initialLoad($params){
+      require_once DOL_DOCUMENT_ROOT . "/core/lib/admin.lib.php";
+      require_once DOL_DOCUMENT_ROOT . '/axagenda/lib/axagenda.lib.php';
+      require_once DOL_DOCUMENT_ROOT . '/axagenda/lib/doctrine/bootstrap.php';
+
+      dol_syslog('GREG dans initialLoad');
+      $user = $entityManager->find('AxUser', 1);
+      dol_syslog('GREG usermail <'.$user->getEmail() . ">");
+      // dol_syslog('DEBUG $entityManager <'.print_r($entityManager, true).'>');
+
+
         $callback = isset( $params['callback'] ) ? $params['callback'] : null; // Undefined index: callback
         $cs = $this->getSetting($params);
         $owned = $this->getCalendar($params);

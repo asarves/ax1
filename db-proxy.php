@@ -91,6 +91,7 @@ if(class_exists('CalendarAgent'))
     }else if("createUpdateRepeatEvent" == $action){
       echo $agent->createUpdateRepeatEvent($_REQUEST);
     }else if("initialLoad" == $action){
+      // dol_syslog("GREG db-pryx initialLoad");
       echo $agent->initialLoad($_REQUEST);
     }else{
       echo 'No such action';

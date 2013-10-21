@@ -61,10 +61,13 @@ if (! $res && file_exists("../../../../../dolibarr/htdocs/main.inc.php")) {
 if (! $res) {
     die("Main include failed");
 }
+
+
 // Change this following line to use the correct relative path from htdocs
 // (do not remove DOL_DOCUMENT_ROOT)
 llxHeader('', 'MyPageName', '');
 // End of page
+
 require_once DOL_DOCUMENT_ROOT . '/axagenda/load_mycalendar.php';
 
 llxFooter();
