@@ -1,0 +1,111 @@
+LlxAxagendaCalendarSetting:
+    type: entity
+    table: llx_axagenda_calendar_setting
+    id:
+        userid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: userId
+            generator:
+                strategy: IDENTITY
+    fields:
+        hourformat:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+            column: hourFormat
+        dayformat:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+            column: dayFormat
+        weekformat:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+            column: weekFormat
+        monthformat:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+            column: monthFormat
+        fromtoformat:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+            column: fromtoFormat
+        activestarttime:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+            column: activeStartTime
+        activeendtime:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+            column: activeEndTime
+        createbydblclick:
+            type: boolean
+            nullable: false
+            comment: ''
+            column: createByDblclick
+        hideinactiverow:
+            type: boolean
+            nullable: false
+            comment: ''
+            column: hideInactiveRow
+        singleday:
+            type: boolean
+            nullable: false
+            comment: ''
+            column: singleDay
+        language:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+        intervalslot:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '30'
+            column: intervalSlot
+        startday:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+            default: '0'
+            column: startDay
+        readonly:
+            type: boolean
+            nullable: true
+            comment: ''
+            column: readOnly
+        initialview:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: initialView
+    lifecycleCallbacks: {  }
