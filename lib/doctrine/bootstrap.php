@@ -2,10 +2,15 @@
 
 // bootstrap.php
 require_once "vendor/autoload.php";
+@include("../../../main.inc.php");
+require_once DOL_DOCUMENT_ROOT."/axagenda/class/doctrine_obj.class.php";
 
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Mapping\Driver\YamlDriver;
+
+
+
 
 $paths = array("src","src/yml", 
 	       "/home/greg/WORK/AUXILIAE/dolibarr.jobenfance/htdocs/axagenda/lib/doctrine", 
@@ -37,3 +42,6 @@ $paths2 = array("src","src/yml",
 // $driver = new YamlDriver(array('src/yml'));
 $driver = new YamlDriver($paths2);
 $config->setMetadataDriverImpl($driver);
+
+DoctrineObj::$entityManager = $entityManager;
+

@@ -48,6 +48,13 @@
 /* } */
 
 @include("../../main.inc.php");
+@include("../../core/lib/admin.lib.php");
+@include("../lib/axagenda.lib.php");
+@include("../lib/doctrine/bootstrap.php");
+
+// @include("./doctrine_job.class.php");
+require_once DOL_DOCUMENT_ROOT . '/axagenda/class/doctrine_obj.class.php';
+
 
 class event{
   var $id;
@@ -191,12 +198,18 @@ class CalendarAgent{
   }
 
   function getCalendar($params){
+
+    $entityManager = DoctrineObj::$entityManager;
+    dol_syslog('GREG dans getCalendar');
     $userId = $params['userId'];
+    dol_syslog('GREG userId <'.$userId.'>');
+    $calendar_type = $entityManager->find('LlxAxagendaCalendarType', $userId);
     $query = "SELECT * FROM ".$this->dbPrefix."calendar_type WHERE userId = '".$userId."'";
+    dol_syslog('GREG calendar_type <'.print_r($calendar_type, true).'>');
     $rs = mysql_query($query);
     $data = array();
     if(0 == mysql_num_rows($rs)){
-      $query = "SELECT * FROM user WHERE id = ".$userId;
+      $query = "SELECT * FROM ".$this->dbPrefix."user WHERE id = ".$userId;
       $rs = mysql_query($query);
       $row = mysql_fetch_object($rs);
       $username = $row->{'username'};            
@@ -480,7 +493,7 @@ class CalendarAgent{
     $rs = mysql_query($query);
     $data = array();
     if(0 == mysql_num_rows($rs)){
-      $query = "SELECT * FROM user WHERE id = ".$userId;
+      $query = "SELECT * FROM ".$this->dbPrefix."user WHERE id = ".$userId;
       $rs = mysql_query($query);
       $row = mysql_fetch_object($rs);
       $username = $row->{'username'};            
@@ -746,6 +759,7 @@ class CalendarAgent{
     dol_syslog('GREG dans initialLoad');
     $user = $entityManager->find('LlxAxagendaUser', 1);
     dol_syslog('GREG usermail <'.$user->getEmail() . ">");
+    dol_syslog('GREG params <'.print_r($params, true).'>');
 
     $callback = isset( $params['callback'] ) ? $params['callback'] : null; // Undefined index: callback
     $cs = $this->getSetting($params);

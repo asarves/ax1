@@ -47,7 +47,7 @@ if (! $res) {
     die("Main include failed");
 }
 
-require_once DOL_DOCUMENT_ROOT."/axagenda/class/CalendarAgent.php";
+require_once DOL_DOCUMENT_ROOT."/axagenda/class/load_classes.php";
 
 if(class_exists('CalendarAgent'))
   {
@@ -92,7 +92,8 @@ if(class_exists('CalendarAgent'))
       echo $agent->createUpdateRepeatEvent($_REQUEST);
     }else if("initialLoad" == $action){
       dol_syslog("GREG db-pryx initialLoad");
-      echo $agent->initialLoad($_REQUEST);
+      $params = $_POST;
+      echo $agent->initialLoad($params);
     }else{
       echo 'No such action';
     }
