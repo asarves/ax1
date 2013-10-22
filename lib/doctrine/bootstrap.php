@@ -11,20 +11,20 @@ $paths = array("src","src/yml",
 	       "/home/greg/WORK/AUXILIAE/dolibarr.jobenfance/htdocs/axagenda/lib/doctrine", 
 	       "/home/greg/WORK/AUXILIAE/dolibarr.jobenfance/htdocs/axagenda/lib/doctrine/src", 
 	       "/home/greg/WORK/AUXILIAE/dolibarr.jobenfance/htdocs/axagenda/lib/doctrine/src/yml");
-$isDevMode = false;
+$isDevMode = true;
 
 // the connection configuration
 $dbParams = array(
 		  'driver'   => 'pdo_mysql',
 		  'user'     => 'root',
 		  'password' => 'admin',
-		  'dbname'   => 'mycalendar',
+		  'dbname'   => 'jobenfance',
 		  );
 
 $config = Setup::createAnnotationMetadataConfiguration($paths, $isDevMode);
 $entityManager = EntityManager::create($dbParams, $config);
 
-$regexp = '/calendar|user/';
+$regexp = '/^llx_axagenda_/';
 $config->setFilterSchemaAssetsExpression($regexp);
 
 
