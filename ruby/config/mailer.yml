@@ -1,0 +1,14 @@
+smtp_settings:
+  :address: ks304579.kimsufi.com
+  :port: 25
+  :domain: ks304579.kimsufi.com
+  :user_name: root
+  :password: UsStuuAL
+  :from: contact@jobenfance.com
+  :sender: contact@jobenfance.com
+  :openssl_verify_mode: OpenSSL::SSL::VERIFY_NONE
+  :enable_starttls_auto: false
+
+default:
+  :from: contact@jobenfance.com
+

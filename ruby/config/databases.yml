@@ -1,0 +1,42 @@
+jobenfance:
+  adapter: mysql2
+  host: localhost
+  username: root
+  password: admin
+  pool: 100
+  # reconnect: false
+  database: jobenfance
+  # socket: /var/run/mysqld/mysqld.sock
+
+jobdependance:
+  adapter: mysql2
+  host: localhost
+  username: root
+  password: admin
+  pool: 100
+  # reconnect: false
+  database: jobdependance
+  #   socket: /var/run/mysqld/mysqld.sock
+
+calendars:
+  adapter: sqlite3
+  database: db/calendars.sqlite3
+  pool: 5
+  timeout: 5000
+
+mycalendar:
+  adapter: mysql2
+  host: localhost
+  username: root
+  password: admin
+  pool: 100
+  # reconnect: false
+  database: mycalendar
+  #   socket: /var/run/mysqld/mysqld.sock
+  
+calendars_test:
+  adapter: sqlite3
+  database: db/calendars_test.sqlite3
+  pool: 5
+  timeout: 5000
+
