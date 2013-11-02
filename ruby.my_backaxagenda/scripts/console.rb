@@ -7,8 +7,6 @@ require 'logger'
 require './helpers/utils'
 require 'active_record'
 
-require './models/my_cal_db'
-
 require './models/jd_db'
 require './models/je_db'
 require './models/cal_db'
@@ -23,7 +21,6 @@ require './models/event_type_jd'
 require './models/event'
 require './models/event_je'
 require './models/event_jd'
-require './models/event_my_cal'
 
 require './models/jd_user'
 require './models/je_user'
@@ -36,4 +33,4 @@ require './models/jd_contact'
 
 require './models/upload'
 
-# require './axagenda'
+require './axagenda'

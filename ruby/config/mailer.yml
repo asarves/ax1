@@ -11,3 +11,4 @@ smtp_settings:
 
 default:
   :from: contact@jobenfance.com
+

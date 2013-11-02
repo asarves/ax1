@@ -33,6 +33,8 @@ mycalendar:
   # reconnect: false
   database: mycalendar
   #   socket: /var/run/mysqld/mysqld.sock
+
+
   
 calendars_test:
   adapter: sqlite3

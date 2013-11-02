@@ -98,42 +98,6 @@ module Event
     my_ce
   end
 
-  def create_mycalendar_event(cal_id=1)
-    my_calendar_event = MyCalendarEvent.new
-    my_ce             = my_calendar_event
-
-    my_ce.doliEventId = self.id
-    my_ce.userId      = self.user_todo.nil? ? 1 : self.user_todo.rowid
-    my_ce.calendarId  = self.cal_id
-    my_ce.repeatType  = 'no'
-    my_ce.creation_date = DateTime.now
-    my_ce.description = self.note.nil? ? '' : self.note
-    my_ce.subject     = self.label.nil? ? '' : self.label + " " + self.id.to_s
-    # my_ce.description = self.note.nil? ? '' : self.note.encode('utf-8'),
-    # my_ce.subject     = self.label.nil? ? '' : self.label.encode('utf-8'),
-    my_ce.update_date = DateTime.now
-    my_ce.locked      = 0
-    
-    # toute la journée
-    hour_start = self.datep.to_s.split[1]
-    hour_end   = self.datep2.nil? ? nil : self.datep2.to_s.split[1]
-
-    date_start = self.datep.to_s.split[0]
-    date_end   = self.datep2.nil? ? nil : self.datep2.to_s.split[0]
-
-
-    
-    if self.datep2.nil? or (date_start == date_end and hour_start == hour_end) or (date_start == date_end and hour_start == '00:00:00' and hour_end == '23:59:00') 
-      my_ce.startTime = "#{self.datep.to_s.split[0]} 00:00"
-      my_ce.endTime   = "#{self.datep.to_s.split[0]} 24:00"
-    else
-      my_ce.startTime   = self.datep
-      my_ce.endTime     = self.datep2 || self.datep || DateTime.now
-    end
-
-    my_ce
-  end
-
   def to_mycalendar(cal_id=1)
     self_json = self.to_json
 

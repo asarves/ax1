@@ -15,7 +15,7 @@ conditions += " and not label like 'Société%ajoutée dans Dolibarr%'"
 conditions += " and not label like 'Facture%dans Dolibarr%'"
 conditions += " and not label like 'Bon de commande%validée%'"
 
-mycal_events = EventJe.where(conditions).map { |e| e.create_mycalendar_event }
+mycal_events = EventJe.where(conditions).map { |e| e.to_mycalendar_db }
 # mycal_events = Array.new.push(EventJe.find(1575)).map { |e| e.to_mycalendar_db }
 
 

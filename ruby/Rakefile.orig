@@ -1,4 +1,4 @@
-ENV['RACK_ENV'] = 'mycalendar' # 'jobenfance'
+ENV['RACK_ENV'] = 'calendars' # 'jobenfance'
 require 'active_record'
 require 'logger'
 
@@ -11,7 +11,7 @@ require './models/event_type'
 require './models/event_type_je'
 require './models/event_type_jd'
 
-require './axagenda'
+brequire './axagenda'
 require 'sinatra/activerecord/rake'
 
 # to run tasks: $ RACK_ENV=jobenfance rake taks
@@ -29,10 +29,10 @@ task :clean do |t|
   exec 'find -name \*~ -exec rm {} \;'
 end
 
-# desc "tests"
-# task :tests, :arg1 do |t, args|
-#   exec "rspec -e '#{args[:arg1]}'"
-# end
+desc "tests"
+task :tests, :arg1 do |t, args|
+  exec "rspec -e '#{args[:arg1]}'"
+end
 
 desc "start the app"
 task :start, :environment do |t, args|
