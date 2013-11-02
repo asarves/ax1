@@ -1,0 +1,32 @@
+%html
+  %head
+    %title Ax Agenda
+    %meta{'http-equiv' => "Content-Type", :content=>"text/html; charset=utf-8"}/
+    %meta{'http-equiv'=>"Cache-Control", :content=>"no-store"}/
+    %meta{'http-equiv'=>"Cache-Control", :content=>"no-cache"}/
+    %meta{'http-equiv'=>"Pragma", :content=>"no-cache, must-revalidate, no-store"}/
+    %link{:rel=>"shortcut icon", :href=>url("images/cubedriveIcon.png"), :type=>"image/x-icon"}
+
+
+    %link{:rel=>"stylesheet", :type=>"text/css", :href=>url("mobile/lib/sencha/resources/css/sencha-touch.css")}
+    %script{:type =>"text/javascript", :src=>url("mobile/lib/sencha/sencha-touch-all.js")}      
+    %link{:rel=>"stylesheet", :type=>"text/css", :href=>url("mobile/resources/css/Ext.ux.TouchCalendarView.css")}
+    %link{:rel=>"stylesheet", :type=>"text/css", :href=>url("mobile/resources/css/skin1.css")}
+      
+
+
+    %script{:type =>"text/javascript", :src=>url("mobile/Ext.ux.TouchCalendarView.js")}
+    %script{:type =>"text/javascript", :src=>url("mobile/Ext.ux.TouchCalendarEvents/Ext.ux.TouchCalendarEventsBase.js")}
+    %script{:type =>"text/javascript", :src=>url("mobile/Ext.ux.TouchCalendarEvents/Ext.ux.TouchCalendarDayEvents.js")}
+    %script{:type =>"text/javascript", :src=>url("mobile/Ext.ux.TouchCalendarEvents/Ext.ux.TouchCalendarMonthEvents.js")}
+    %script{:type =>"text/javascript", :src=>url("mobile/Ext.ux.TouchCalendarEvents/Ext.ux.TouchCalendarWeekEvents.js")}
+    %script{:type =>"text/javascript", :src=>url("mobile/Ext.ux.TouchCalendarEvents/Ext.ux.TouchCalendarEvents.js")}
+    %script{:type =>"text/javascript", :src=>url("mobile/EventStore.js")}
+    %link{:rel=>"stylesheet", :type=>"text/css", :href=>url("mobile/Ext.ux.TouchCalendarEvents/resources/css/Ext.ux.TouchCalendarEvents.css")}
+      
+    %script{:type =>"text/javascript", :src=>url("mobile/app.js")}
+
+    %title
+
+  %body
+    = yield

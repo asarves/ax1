@@ -1,0 +1,3 @@
+# removing untracked files
+git clean -f -d # remove untracked files and directories
+

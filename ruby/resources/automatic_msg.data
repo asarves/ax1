@@ -1,0 +1,54 @@
+Time Zone société (maison mère)
+Heure société (maison mère)
+<b>{cccc}</b> le code client sur n lettres<br><b>{cccc000}</b> le code client sur n lettres est suivi d'un compteur propre au client sans offset, complété par des zéros pour en avoir autant que dans le masque, et remis à zéro en même temps que le compteur global.<br><b>{tttt}</b> Le code type entreprise sur n caractères (voir dictionnaires-types de sociétés).<br>
+Gestion des tiers (sociétés, particuliers) et contacts
+Permet de gérer plusieurs sociétés
+Consulter les tiers (sociétés) liés à l'utilisateur
+Créer/modifier les tiers (sociétés) liés à l'utilisateur
+Supprimer les tiers (sociétés) liés à l'utilisateur
+Exporter les tiers (sociétés)
+Types de sociétés
+Le taux de TVA proposé par défaut est 0. C'est le cas d'associations, particuliers ou certaines petites sociétés.
+En France, il s'agit des sociétés ou organismes ayant choisi un régime fiscale réel (Réel simplifié ou Réel normal), régime dans lequel la TVA est déclarée.
+En France, il s'agit des associations ne déclarant pas de TVA ou sociétés, organismes ou professions libérales ayant choisi le régime fiscal micro entreprise (TVA en franchise) et payant une TVA en franchise sans faire de déclaration de TVA. Ce choix fait de plus apparaitre la mention "TVA non applicable - art-293B du CGI" sur les factures.
+En Espagne, ce sont des sociétés en commandite, les sociétés anonymes, etc... et les individus (autonomes) sous réserve de certaines sections de l'IAE Espagnol.
+En Espagne, ce sont des professionnels autonomes et indépendants qui offrent des services, et des sociétés qui ont choisi le système fiscal du module. 
+En Espagne, ce sont des sociétés qui ne sont pas soumises au système fiscal du module.
+Informations sur la société/institution
+Les 2 étapes indispensables de configuration sont les 2 premières dans le menu gauche, à savoir, la configuration de la société/institution et la configuration des modules:
+Les données du menu <b>Configuration -> Société/institution</b> sont requises car les informations saisies sont utilisées dans la plupart des écrans, en affichage, ou pour modifier le comportement de Dolibarr (comme par exemple des fonctions qui dépendent de votre pays).
+Éditez sur cette page toutes les informations connues sur la société ou association que vous devez gérer
+Les triggers sont des fichiers qui, une fois déposés dans le répertoire <b>htdocs/includes/triggers</b>, modifient le comportement du workflow de Dolibarr. Ils réalisent des actions supplémentaires, déclenchées par les événements Dolibarr (création société, validation facture, clôture contrat...).
+La fonction des notifications par emails permet d'envoyer automatiquement un email, pour certains événements Dolibarr, aux tiers (sociétés clients, prospects ou fournisseurs) configurés pour. Le choix des notifications et contacts destinataires se fait tiers par tiers.
+Ajouter un événement dans le calendrier sur création de sociétés
+Votre institution est configurée comme non assujettie à la TVA (Accueil - Configuration - Société/Institution), aussi il n'y a aucune option sur la gestion TVA à paramétrer.  
+Configuration du module Multi-société
+Cette société est dans les catégories clients/prospects suivantes
+Cette société est dans les catégories fournisseurs suivantes
+Cette société n'est dans aucune catégorie en particulier
+Evénement concernant la société
+Le nom de société %s existe déjà. Veuillez en choisir un autre.
+Êtes-vous sûr de vouloir supprimer cette société et toutes les informations qui en dépendent ?
+Nouvelle société (prospect, client, fournisseur)
+Nouveau groupement de sociétés
+Groupement de sociétés
+Liste des sociétés
+Supprimer une société
+La société "%s" a été supprimée de la base.
+Liste des sociétés
+Tiers (sociétés/institutions) et attributs
+Tiers (sociétés/institutions) et attributs
+Certaines sociétés ou indépendants offrent un service de support très rapide (parfois immédiat) et encore plus efficace grâce à la possibilité de prise de contrôle à distance de votre ordinateur pour mieux diagnostiquer et résoudre vos problèmes. Une telle aide peut être trouvée sur la bourse des accompagnateurs de <b>%s</b>.
+Contacts uniques des sociétés
+Aucune notification par email n'est prévue pour cet événement et société
+Allez dans la Configuration 'Société/Institution' pour corriger
+Votre pays n'est pas défini. Corriger en allant dans Accueil-Configuration-Société/Institution-Editer.
+Société ou institution
+Chiffre affaire (pour société) ou Budget (asso ou collectivité)
+Société %s ajoutée dans Dolibarr
+Liés à autre société
+Cet écran permet de créer un utilisateur interne à votre société/institution. Pour créer un utilisateur externe (client, fournisseur, ...), utiliser le bouton 'Créer utilisateur Dolibarr' qui se trouve sur la fiche contact du tiers en question.
+Un utilisateur <b>interne</b> est un utilisateur appartenant à votre société/institution.<br>Un utilisateur <b>externe</b> est un utilisateur client, fournisseur ou autre.<br><br>Dans les 2 cas, les permissions utilisateurs définissent les droits d'accès mais l'utilisateur externe peut en plus avoir un gestionnaire de menu différent de l'utilisateur interne (Voir Accueil - Configuration - Affichage)
+Aucune facture percevable, prélevée avec succès. Vérifiez que les factures sont sur des sociétés dont le BAN(RIB) est correctement renseigné.
+Êtes-vous sûr de vouloir saisir un rejet de prélèvement pour la société
+Bonjour,<br><br>Le prélèvement de la facture %s pour le compte de la société %s, d'un montant de %s a été rejeté par la banque.<br><br>--<br>%$
